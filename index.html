@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce-product-page</title>
+
+    <!-- Favicon -->
+     <link rel="shortcut icon" href="./assets/favicon-32x32.png" type="image/x-icon">
+
+    <!-- CSS Link -->
+     <link rel="stylesheet" href="styles.css">
+
+     <!-- Google font -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+
+        <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <!--  -->
+        <div class="nav-left">
+            <!-- Toggle buttons -->
+            <div class="toggle-menu">
+                <button aria-controls="navigation" aria-expanded="false" class="mobile-nav-toggle">
+                    <img src="./assets/icon-menu.svg" alt="" class="menu-btn">
+    
+                    <img src="./assets/icon-close.svg" alt="" class="close-btn">
+                </button>
+            </div>
+            <!-- Logo -->
+            <div class="logo">
+                <img src="./assets/logo.svg" alt="logo">
+            </div>
+        </div>
+        <!-- Nav links -->
+        <nav>
+            <ul class="navigation" id="navigation" data-visible="false">
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    
+        <!-- Cart & Avatar -->
+        <div class="cart-avatar">
+
+            <!-- Cart -->
+            <div class="cart-dropdown" >
+                <button class="link" id="link" >
+                    <img src="./assets/icon-cart.svg" alt="cart icon">
+                </button>
+                <div class="cart-dropdown-menu cart-info">
+                    <div class="header">
+                        <h3>Cart</h3>
+                    </div>
+                    <div class="cart-content">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, culpa.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avatar -->
+            <div class="avatar">
+                <button>
+                    <img src="./assets/image-avatar.png" alt="profile avatar">
+                </button>
+            </div>
+        </div>
+    
+        <div class="menu-overlay"></div>
+    </header>
+
+    <!-- Main content -->
+
+    <main>
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="./assets/image-product-1.jpg" alt="main sneaker">
+            </div>
+
+            <div class="thumbnails">
+                <img src="./assets/image-product-1-thumbnail.jpg" alt="sneaker 1">
+                <img src="./assets/image-product-2-thumbnail.jpg" alt="sneaker 2">
+                <img src="./assets/image-product-3.jpg" alt="sneaker 3">
+                <img src="./assets/image-product-4-thumbnail.jpg" alt="sneaker 4">
+                <!-- <img src="./assets/image-product-4.jpg" alt="sneaker 8"> -->
+                 <!-- <img src="./assets/image-product-2.jpg" alt="sneaker 4"> -->
+                <!-- <img src="./assets/image-product-3-thumbnail.jpg" alt="sneaker 5"> -->
+            </div>
+        </div>
+
+        <div class="right">
+                <h4>Sneaker Company</h4>
+                <h1> Fall Limited Edition <br> Sneakers</h1>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+
+                <div class="prices">
+                    <div class="discount">
+                        <span> $125.00</span>
+                        <span>50% </span>
+                    </div>
+
+                    <div class="slashed">
+                        <span> $250.00 </span>
+                    </div>
+                </div>
+
+                <div class="btns">
+                    <div class="quantity">
+                        <button>
+                            <img src="./assets/icon-minus.svg" alt="minus">
+                        </button>
+                        <span>0</span>
+                        <button>
+                            <img src="./assets/icon-plus.svg" alt="plus icon">
+                        </button>
+                    </div>
+                    <button class="add-cart">
+                        <img src="./assets/icon-cart.svg" alt="cart icon">
+                        <span>Add to cart</span>
+                    </button>
+                </div>
+        </div>
+    </main>
+    
+</body>
+</html>
