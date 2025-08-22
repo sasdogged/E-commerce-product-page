@@ -60,7 +60,15 @@
                         <h3>Cart</h3>
                     </div>
                     <div class="cart-content">
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ut, culpa.
+                        <div class="content">
+                            <span ><img src="./assets/image-product-2-thumbnail.jpg" alt="delete icon"></span>
+                            <span class="cart-item-details">
+                                <p>Fall Limited Edition Sneakers</p>
+                                <p>$125.00 x </p>
+                            </span>
+                            <button><img src="./assets/icon-delete.svg" alt=""></button>
+                        </div>
+                        <button class="checkout-btn">Checkout</button>
                     </div>
                 </div>
             </div>
@@ -80,8 +88,10 @@
 
     <main>
         <div class="product-gallery">
-            <div class="main-image">
-                <img src="./assets/image-product-1.jpg" alt="main sneaker">
+            <div class="main-image" >
+                <button class="prev"><img src="./assets/icon-previous.svg" alt="previous"></button>
+                <img src="./assets/image-product-1.jpg" alt="main sneaker" id="main-image">
+                <button class="next"><img src="./assets/icon-next.svg" alt="next"></button>
             </div>
 
             <div class="thumbnails">
@@ -89,16 +99,13 @@
                 <img src="./assets/image-product-2-thumbnail.jpg" alt="sneaker 2">
                 <img src="./assets/image-product-3.jpg" alt="sneaker 3">
                 <img src="./assets/image-product-4-thumbnail.jpg" alt="sneaker 4">
-                <!-- <img src="./assets/image-product-4.jpg" alt="sneaker 8"> -->
-                 <!-- <img src="./assets/image-product-2.jpg" alt="sneaker 4"> -->
-                <!-- <img src="./assets/image-product-3-thumbnail.jpg" alt="sneaker 5"> -->
             </div>
         </div>
 
         <div class="right">
-                <h4>Sneaker Company</h4>
+                <h2>Sneaker Company</h2>
                 <h1> Fall Limited Edition <br> Sneakers</h1>
-                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+                <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
 
                 <div class="prices">
                     <div class="discount">
@@ -112,19 +119,21 @@
                 </div>
 
                 <div class="btns">
+
                     <div class="quantity">
-                        <button>
-                            <img src="./assets/icon-minus.svg" alt="minus">
+                        <button  id="minus">
+                            <img src="./assets/icon-minus.svg" alt="minus" >
                         </button>
-                        <span>0</span>
-                        <button>
-                            <img src="./assets/icon-plus.svg" alt="plus icon">
+                        <span id="quantity-displayed">0</span>
+                        <button  id="plus">
+                            <img src="./assets/icon-plus.svg" alt="plus icon" >
                         </button>
                     </div>
                     <button class="add-cart">
                         <img src="./assets/icon-cart.svg" alt="cart icon">
                         <span>Add to cart</span>
                     </button>
+
                 </div>
         </div>
     </main>

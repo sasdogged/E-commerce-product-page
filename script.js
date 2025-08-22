@@ -30,4 +30,41 @@ const cartDropdown = document.querySelector('.cart-dropdown');
 cartButton?.addEventListener('click', function () {
     cartDropdown?.classList.toggle("active");
 });
+// Product gallery scrolling
+const images = [
+    "./assets/image-product-1-thumbnail.jpg",
+    "./assets/image-product-2-thumbnail.jpg",
+    "./assets/image-product-3.jpg",
+    "./assets/image-product-4-thumbnail.jpg"
+];
+let currentIndex = 0;
+const mainImage = document.getElementById("main-image");
+const prevButton = document.querySelector(".prev");
+const nextButton = document.querySelector(".next");
+if (mainImage && prevButton && nextButton) {
+    prevButton.addEventListener("click", () => {
+        currentIndex = (currentIndex - 1 + images.length) % images.length;
+        mainImage.src = images[currentIndex];
+    });
+    nextButton.addEventListener("click", () => {
+        currentIndex = (currentIndex + 1) % images.length;
+        mainImage.src = images[currentIndex];
+    });
+}
+// Add to Cart
+let cartQuantity = 0;
+let quantityDisplayed = document.getElementById('quantity-displayed');
+const plusCart = document.getElementById('plus');
+const minusCart = document.getElementById('minus');
+minusCart?.addEventListener('click', function () {
+    cartQuantity = cartQuantity - 1;
+    quantityDisplayed.textContent = cartQuantity.toString();
+    console.log(cartQuantity);
+});
+plusCart?.addEventListener('click', function () {
+    cartQuantity = cartQuantity + 1;
+    quantityDisplayed.textContent = cartQuantity.toString();
+    console.log(cartQuantity);
+});
+// export {};
 //# sourceMappingURL=script.js.map
