@@ -40,14 +40,15 @@ cartButton?.addEventListener('click', function() {
 // Product gallery scrolling
 
 const images: string[] = [
-  "./assets/image-product-1-thumbnail.jpg",
-  "./assets/image-product-2-thumbnail.jpg",
+  "./assets/image-product-1.jpg",
+  "./assets/image-product-2.jpg",
   "./assets/image-product-3.jpg",
-  "./assets/image-product-4-thumbnail.jpg"
+  "./assets/image-product-4.jpg"
 ];
 
 let currentIndex: number = 0;
 
+// main Image Variable / Prev Button / Next Button
 const mainImage = document.getElementById("main-image") as HTMLImageElement | null;
 const prevButton = document.querySelector(".prev") as HTMLButtonElement | null;
 const nextButton = document.querySelector(".next") as HTMLButtonElement | null;
@@ -64,24 +65,63 @@ if (mainImage && prevButton && nextButton) {
   });
 }
 
-// Add to Cart
+// Add to Cart / Display the item quantity
 
+let itemQuantity = document.getElementById('quantity') 
 let cartQuantity:number = 0;
 let quantityDisplayed = document.getElementById('quantity-displayed')
 const plusCart = document.getElementById('plus')
 const minusCart = document.getElementById('minus')
+let cartItemTotal = document.getElementById('cart-item-total')
+let cartItemQty = document.getElementById('cart-item-qty')
+let ItemPrice = 125.00;
+const addToCartBtn = document.getElementById('add-cart')
+let cartContent = document.getElementById('cart-content')
+const delBtn = document.getElementById('del-btn');
+let cartEmpty = document.getElementById('empty')
+
+// function updateCartDisplay() {
+
+//     cartItemQty!.textContent = cartQuantity.toString()
+
+//     const total = cartQuantity * ItemPrice;
+//     cartItemTotal!.textContent = `$${total.toFixed(2)}`;
+// }
 
 minusCart?.addEventListener('click', function() {
     cartQuantity = cartQuantity - 1;
     quantityDisplayed!.textContent = cartQuantity.toString()
+    itemQuantity!.textContent = quantityDisplayed!.textContent
+    // updateCartDisplay()
     console.log(cartQuantity)
 });
 
 plusCart?.addEventListener('click', function() {
     cartQuantity = cartQuantity + 1;
     quantityDisplayed!.textContent = cartQuantity.toString()
+    itemQuantity!.textContent = quantityDisplayed!.textContent
+    // updateCartDisplay()
     console.log(cartQuantity)
 });
+
+addToCartBtn?.addEventListener('click', function() {
+
+   if(cartItemQty && cartItemTotal && cartQuantity > 0) {
+    cartItemQty.textContent = cartQuantity.toString();
+    const total = cartQuantity * ItemPrice;
+    cartItemTotal.textContent = `$${total.toFixed(2)}`
+    cartContent!.style.display = 'block';
+    cartEmpty!.style.display = 'none';
+   }
+})
+
+// Delete Cart Content
+
+delBtn?.addEventListener('click', function() {
+    cartContent!.style.display = 'none';
+    cartEmpty!.style.display = 'block';
+})
+
 
 
 

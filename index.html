@@ -54,21 +54,29 @@
             <div class="cart-dropdown" >
                 <button class="link" id="link" >
                     <img src="./assets/icon-cart.svg" alt="cart icon">
+                    <span id="quantity">0</span>
                 </button>
+                
                 <div class="cart-dropdown-menu cart-info">
                     <div class="header">
                         <h3>Cart</h3>
                     </div>
                     <div class="cart-content">
-                        <div class="content">
-                            <span ><img src="./assets/image-product-2-thumbnail.jpg" alt="delete icon"></span>
-                            <span class="cart-item-details">
-                                <p>Fall Limited Edition Sneakers</p>
-                                <p>$125.00 x </p>
-                            </span>
-                            <button><img src="./assets/icon-delete.svg" alt=""></button>
+                        <div id="cart-content">
+                            <div class="content">
+                                <span ><img src="./assets/image-product-2-thumbnail.jpg" alt="delete icon"></span>
+                                <span class="cart-item-details">
+                                    <p>Fall Limited Edition Sneakers</p>
+                                    <p>
+                                        $125.00 x <span id="cart-item-qty">0</span>
+                                        <span id="cart-item-total" class="cart-total">$0.00</span>
+                                    </p>
+                                </span>
+                                <button id="del-btn"><img src="./assets/icon-delete.svg" alt=""></button>
+                            </div>
+                            <button class="checkout-btn">Checkout</button>
                         </div>
-                        <button class="checkout-btn">Checkout</button>
+                        <p id="empty">Cart is empty</p>
                     </div>
                 </div>
             </div>
@@ -95,10 +103,10 @@
             </div>
 
             <div class="thumbnails">
-                <img src="./assets/image-product-1-thumbnail.jpg" alt="sneaker 1">
-                <img src="./assets/image-product-2-thumbnail.jpg" alt="sneaker 2">
-                <img src="./assets/image-product-3.jpg" alt="sneaker 3">
-                <img src="./assets/image-product-4-thumbnail.jpg" alt="sneaker 4">
+                <img src="./assets/image-product-1-thumbnail.jpg"  alt="thumbnail 1">
+                <img src="./assets/image-product-2-thumbnail.jpg"  alt="thumbnail 2" >
+                <img src="./assets/image-product-3.jpg"  alt="thumbnail 3" >
+                <img src="./assets/image-product-4-thumbnail.jpg"  alt="thumbnail 4" >
             </div>
         </div>
 
@@ -129,7 +137,7 @@
                             <img src="./assets/icon-plus.svg" alt="plus icon" >
                         </button>
                     </div>
-                    <button class="add-cart">
+                    <button class="add-cart" id="add-cart">
                         <img src="./assets/icon-cart.svg" alt="cart icon">
                         <span>Add to cart</span>
                     </button>
