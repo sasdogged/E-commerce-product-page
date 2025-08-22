@@ -1,5 +1,4 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
 //  Variables for the mobile menu toggle
 const navigation = document.getElementById('navigation');
 const mobileToggle = document.querySelector(".mobile-nav-toggle");
